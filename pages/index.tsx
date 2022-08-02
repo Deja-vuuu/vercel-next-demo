@@ -4,7 +4,6 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React, { useState } from 'react';
 
-import 'antd/dist/antd.css';
 
 const Home: NextPage = () => {
   const [visible, setVisible] = useState(false);
