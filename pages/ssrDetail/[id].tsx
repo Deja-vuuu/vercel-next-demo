@@ -22,7 +22,7 @@ const Detail: NextPage = (props: any) => {
         data?.name
       }
       <Image src={data?.sprites?.other?.["official-artwork"]?.front_default}
-        width={200} height={200} />
+        width={200} height={200}  alt="test"/>
     </h1>
   )
 }
@@ -33,9 +33,13 @@ export async function getServerSideProps(context: any) {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon/" + id).then((data) => {
     return data.json();
   });
+  const {name, sprites} = res;
+  // https://nextjs.org/docs/messages/large-page-data  128kb
   return {
     props: {
-      data: res
+      data: {
+        name, sprites
+      }
     }
   };
 }
