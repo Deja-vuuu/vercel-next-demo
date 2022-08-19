@@ -7,7 +7,7 @@ import { useEffect } from "react";
 const Detail: NextPage = (props: any) => {
   const { data } = props
   console.log('data', data);
-  console.log('da1ta', data?.sprites?.other);
+  console.log('da11t1a', data?.sprites?.other);
 
   const router = useRouter();
   const { id } = router?.query;
