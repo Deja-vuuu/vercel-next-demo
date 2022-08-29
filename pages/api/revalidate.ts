@@ -5,7 +5,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export default async function revalidate(req: NextApiRequest,
     res: NextApiResponse<any>) {
     try {
-        await res.revalidate(`/ssgDetail/${req.query.postId}`);
+        await res.revalidate(`/isr`);
         return res.json({
             revalidated: true,
         });
