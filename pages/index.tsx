@@ -21,11 +21,11 @@ const HomePage = () => {
             </p>
 
             <div className='flex flex-col items-center mt-10 space-y-2 '>
-              <CustomLink href='/csr'>CSR</CustomLink>
-              <CustomLink href='/ssr'>SSR</CustomLink>
-              <CustomLink href='/ssg'>SSG</CustomLink>
-              <CustomLink href='/isr'>ISR</CustomLink>
-              <CustomLink href='/isr-20'>ISR 20s</CustomLink>
+              <CustomLink href='/csr/1'>CSR</CustomLink>
+              <CustomLink href='/ssr/1'>SSR</CustomLink>
+              <CustomLink href='/ssg/1'>SSG</CustomLink>
+              <CustomLink href='/isr/1'>ISR</CustomLink>
+              <CustomLink href='/isr-20/1'>ISR 20s</CustomLink>
             </div>
 
           </div>
