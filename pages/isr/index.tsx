@@ -28,7 +28,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
     return {
         props: { dateTime: res.data.datetime },
-        // revalidate: 5,
+        revalidate: 5,
     };
 };
 export default ISRPage

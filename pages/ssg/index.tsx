@@ -24,7 +24,7 @@ const SSGPage = ({ dateTime }: SSGPageProps) => {
 
 export const getStaticProps: GetStaticProps = async () => {
     const res = await axios.get<TimeResponse>('https://worldtimeapi.org/api/ip');
-
+    console.log('test----ssg')
     return {
         props: { dateTime: res.data.datetime },
     };

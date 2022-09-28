@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   swcMinify: true,

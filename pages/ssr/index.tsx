@@ -26,7 +26,7 @@ export default function SSRPage({ dateTime }: SSRPageProps) {
 
 export const getServerSideProps: GetServerSideProps = async () => {
     const res = await axios.get<TimeResponse>('https://worldtimeapi.org/api/ip');
-
+    console.log('test----ssr')
     return {
         props: { dateTime: res.data.datetime },
     };

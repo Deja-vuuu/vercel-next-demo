@@ -23,7 +23,7 @@ export default function TimeSection({
     <section className='bg-dark'>
       <div className='flex flex-col items-center justify-center min-h-screen text-center text-white layout'>
         <h1>{title}</h1>
-        <p className='mt-2 text-gray-300'>{description}</p>
+        <p className='mt-4 text-gray-300'>{description}</p>
         <h2 className='mt-8 text-5xl md:text-6xl text-primary-400'>
           {cleanDate ? cleanDate : 'LOADING...'}
         </h2>

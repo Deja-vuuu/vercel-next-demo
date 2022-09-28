@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
 import TimeSection from 'components/TimeSection';
-import dayjs from 'dayjs'
 import { TimeResponse } from 'types/TimeResponse';
+
 const CSRPage = () => {
     const [dateTime, setDateTime] = useState<string>();
-
     useEffect(() => {
         axios
             .get<TimeResponse>('https://worldtimeapi.org/api/ip')
@@ -13,7 +12,6 @@ const CSRPage = () => {
                 setDateTime(res.data.datetime);
                 return res.data.datetime;
             })
-            // eslint-disable-next-line no-console
             .catch((error) => console.error(error));
     }, []);
 
@@ -25,7 +23,6 @@ const CSRPage = () => {
         />
     </main>;
 }
-
 
 
 export default CSRPage
