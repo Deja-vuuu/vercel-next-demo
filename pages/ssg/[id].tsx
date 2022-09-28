@@ -1,19 +1,22 @@
 import axios from 'axios';
 import * as React from 'react';
 import { GetStaticProps } from 'next';
+
 import Content from '@/components/Content';
+
 import { getPageData } from 'apis'
 import { range } from "lodash";
-type ISR20PageProps = {
+
+type SSGPageProps = {
     pageData: any;
 };
 
-const ISR20Page = ({ pageData }: ISR20PageProps) => {
+const SSGPage = ({ pageData }: SSGPageProps) => {
     return (
         <main>
             <Content
-                title='ISR20'
-                description='If you visit after the revalidate time (20s), your next full refresh visit will trigger fetch.'
+                title='SSG'
+                description='Fetched only once, when running yarn build on deployment.'
                 data={pageData}
             />
         </main>
@@ -27,7 +30,6 @@ export const getStaticProps: GetStaticProps = async (context: any) => {
 
     return {
         props: { pageData: pageData },
-        revalidate: 5,
     };
 };
 
@@ -44,4 +46,4 @@ export async function getStaticPaths(context: any) {
     }
 }
 
-export default ISR20Page
+export default SSGPage

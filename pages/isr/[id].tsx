@@ -1,19 +1,23 @@
 import axios from 'axios';
 import * as React from 'react';
 import { GetStaticProps } from 'next';
+
 import Content from '@/components/Content';
+
 import { getPageData } from 'apis'
 import { range } from "lodash";
-type ISR20PageProps = {
+
+type ISRPageProps = {
     pageData: any;
 };
 
-const ISR20Page = ({ pageData }: ISR20PageProps) => {
+const ISRPage = ({ pageData }: ISRPageProps) => {
     return (
+
         <main>
             <Content
-                title='ISR20'
-                description='If you visit after the revalidate time (20s), your next full refresh visit will trigger fetch.'
+                title='ISR'
+                description='If you visit after the revalidate time (5s), your next full refresh visit will trigger fetch.'
                 data={pageData}
             />
         </main>
@@ -43,5 +47,6 @@ export async function getStaticPaths(context: any) {
         fallback: "blocking"
     }
 }
+export default ISRPage
 
-export default ISR20Page
+
