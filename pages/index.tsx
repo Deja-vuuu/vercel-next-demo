@@ -17,7 +17,7 @@ const HomePage = () => {
               </CustomLink>
             </h1>
             <p className='mt-2 text-sm text-gray-300'>
-              Demo of Next.js rendering type using time API.
+              Demo of Next.js rendering type using API.
             </p>
 
             <div className='flex flex-col items-center mt-10 space-y-2 '>
