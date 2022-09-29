@@ -1,7 +1,6 @@
-import axios from 'axios';
 import * as React from 'react';
 import { GetServerSideProps } from 'next';
-
+import { useRouter } from 'next/router';
 import Content from '@/components/Content';
 
 import { TimeResponse } from '@/types/TimeResponse';
@@ -12,9 +11,12 @@ type SSRPageProps = {
 };
 
 export default function SSRPage({ pageData }: SSRPageProps) {
+    const router = useRouter()
     return (
         <>
-            <main>
+            <main onClick={() => {
+                router.push('/ssr/2')
+            }}>
                 <Content
                     title='SSR'
                     description='Fetched every render, on server side.'

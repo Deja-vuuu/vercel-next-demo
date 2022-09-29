@@ -18,7 +18,7 @@ const getPageData = async (id: any): Promise<any> => {
   const [poke] = await Promise.all([getPoke(id)])
   return {
     ...poke,
-    datetime: new Date()
+    datetime: new Date().getTime()
   }
 }
 
