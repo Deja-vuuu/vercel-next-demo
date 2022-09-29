@@ -15,12 +15,11 @@ const getPoke = async (id: any) => {
 }
 
 const getPageData = async (id: any): Promise<any> => {
-  const [datetime, poke] = await Promise.all([getWorldTime(), getPoke(id)])
+  const [poke] = await Promise.all([getPoke(id)])
   return {
     ...poke,
-    datetime: datetime
+    datetime: new Date()
   }
-
 }
 
 export {
